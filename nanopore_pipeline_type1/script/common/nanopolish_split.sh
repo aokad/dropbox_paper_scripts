@@ -8,6 +8,7 @@ INPUT_FASTQ=$2
 INPUT_BAM=$3
 OUTPUT_DIR=$4
 REFERENCE=$5
+REGION=$6
 
 mkdir -p ${OUTPUT_DIR}
 LOCAL_FASTQ=${OUTPUT_DIR}/$(basename ${INPUT_FASTQ})
@@ -18,5 +19,6 @@ ln -s ${INPUT_FASTQ} ${LOCAL_FASTQ}
 /nanopolish/nanopolish call-methylation -t 8 \
 -r ${LOCAL_FASTQ} \
 -b ${INPUT_BAM} \
+-w "${REGION}" \
 -g ${REFERENCE} \
 > ${OUTPUT_DIR}/methylation_calls.tsv
