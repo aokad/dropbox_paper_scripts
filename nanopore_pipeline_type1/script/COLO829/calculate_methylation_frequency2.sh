@@ -8,4 +8,4 @@
 python3 script/common/calculate_methylation_frequency2.py \
   ./nanopolish/COLO829/COLO829.methylation_calls.tsv \
   ./whatshap/COLO829/haplotag.txt \
-  ./methylation/COLO829/COLO829
+  ./calculate_methylation_frequency2/COLO829/COLO829
